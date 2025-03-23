@@ -53,3 +53,4 @@ function handleObject(anyobject){
 // handleObject(user)
 handleObject({username: "Ram", price: 2000})
 // Output: Username is Ram and price is 2000
+
