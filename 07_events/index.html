@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Properties Demo</title>
+</head>
+<body>
+  <button id="btn">Click Me!</button>
+
+  <script>
+    document.getElementById("btn").addEventListener("click", function(event) {
+      console.log("Event Type:", event.type);
+      console.log("Timestamp:", event.timeStamp);
+      console.log("Default Prevented:", event.defaultPrevented);
+
+      console.log("Target:", event.target);
+      console.log("Current Target:", event.currentTarget);
+      console.log("Src Element (IE):", event.srcElement);
+      console.log("To Element (mouseover only):", event.toElement);
+
+      console.log("Mouse Position (Viewport):", event.clientX, event.clientY);
+      console.log("Mouse Position (Screen):", event.screenX, event.screenY);
+
+      console.log("Alt Key Pressed:", event.altKey);
+      console.log("Ctrl Key Pressed:", event.ctrlKey);
+      console.log("Shift Key Pressed:", event.shiftKey);
+    });
+
+    document.addEventListener("keydown", function(event) {
+      console.log("Key Pressed:", event.key);
+      console.log("Key Code:", event.keyCode);
+      console.log("Ctrl Pressed:", event.ctrlKey);
+    });
+  </script>
+</body>
+</html>
